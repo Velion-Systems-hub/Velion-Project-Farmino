@@ -66,7 +66,7 @@ nav a {
     border-radius: 2px;
     color: #18191F;
     font-family: 'Josefin Sans', sans-serif;
-     line-height: 26.6px;
+    line-height: 26.6px;
     font-size: 16px;
     font-weight: 600; /* semibold */
 }
@@ -127,18 +127,18 @@ nav a:hover{
     width: 80%;
     line-height: normal;
     font-weight: 700;
-    margin:18% 0 0px 0;   /* space below h1 */
+    margin:18% 0 10px 0;   /* space below h1 */
     letter-spacing: 7px;
     word-spacing: 18px;
 }
 
-.writeups h3 {
+.writeups p {
     width: 70%;
     font-weight: 500;
     font-size: 18px;
     padding: 5px;
-    margin:15px 0 0 0;
-    color: #F5F5F5;
+    margin:10px 0 0 0;
+    color: #bbbbbb;
 }
 
 .first-btn{
@@ -154,17 +154,26 @@ nav a:hover{
     font-family: 'Josefin Sans', sans-serif;
     border: 1px #fff solid;
     outline: none;
-    color: #fff;
+    color: #023F3A;
+    cursor: pointer;
     padding: 9px 40px;
     border-radius: 1px;
 }
 
-.first-btn a:hover{
-    color: #023F3A;
-    transition: .5s;
+.auto-hover {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
     background: #fff;
-     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 1);
-    transition: .1s;
+    color: #023F3A;box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 6px;
+    
+}
+.auto-hover.hovered {
+    background-color: #023F3A;
+    color: #fff;
 }
 
 .first-ephant_img{
@@ -180,7 +189,7 @@ nav a:hover{
 
 .second-section{
     margin: 80px;
-    margin-top: 25%;
+    margin-top: 20%;
 }
 
 .missions_phyle{
@@ -188,9 +197,9 @@ nav a:hover{
     width: 100%;
 }
 
-.mision_phyla{
- width: 100%;
-  height: 43.75%;
+.mision_phyla{   
+    width: 100%;
+    height: 43.75%;
 }
 
 .mission_Fila h1{
@@ -277,132 +286,215 @@ nav a:hover{
 }
 
 .card {
-  width: 362px;
-  height: 350px;
-  background-image: url(./Assets/backimg.png); /* Replace with actual path */
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: flex-end;
+    width: 362px;
+    height: 350px;
+    background-image: url(./Assets/backimg.png); /* Replace with actual path */
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
 }
 
 .card_patch {
-  width: 362px;
-  height: 350px;
-  background-image: url(./Assets/patch.png); /* Replace with actual path */
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: flex-end;
+    width: 362px;
+    height: 350px;
+    background-image: url(./Assets/patch.png); /* Replace with actual path */
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
 }
 
 .card_path{
-  width: 362px;
-  height: 350px;
-  background-image: url(./Assets/path.png); /* Replace with actual path */
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: flex-end;
+    width: 362px;
+    height: 350px;
+    background-image: url(./Assets/path.png); /* Replace with actual path */
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
 }
 
 .overlay {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8),transparent);
-  padding: 20px;
-  color: white;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8),transparent);
+    padding: 20px;
+    color: white;
 }
 
-
 .overlay h2 {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  width: 324px;
-  height: 32px;
-  line-height: 1.6;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    width: 324px;
+    height: 32px;
+    line-height: 1.6;
+    /* Animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: uploadFade 3s ease-in-out infinite;
 }
 
 .overlay p {
-  font-family: 'Josefin Sans', serif;
-  font-size: 16px;
-  line-height: 1.3;
+    font-family: 'Josefin Sans', serif;
+    font-size: 16px;
+    line-height: 1.3;
+    /* Animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: uploadFade 7s ease-in-out infinite;
+    animation-delay: 0.4s; /* Optional: staggered start */
 }
+
+/* Keyframes */
+@keyframes uploadFade {
+    0% {
+    opacity: 0;
+    transform: translateY(20px);
+}
+20% {
+    opacity: 1;
+    transform: translateY(0);
+}
+80% {
+    opacity: 1;
+    transform: translateY(0);
+}
+100% {
+    opacity: 0;
+    transform: translateY(20px);
+}
+}
+
 
 .third_card{
     display: flex;
     gap: 50px;
 }
 
-.forth_section{
-    background: #F2EEE9;
-    height: 533px;
-    width: 100vw;             /* Full width of the screen */           /* Full height of the viewport */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-}
 
-.forth{
-    color: #023F3A;
-    font-family: 'Libre Baskerville', serif;
-    font-size: 48px;
-    font-weight: 700; /* Bold */
-    line-height: 120%; /* 120% of 48px = 57.6px */
-    margin: 0;
-    padding: 0;
-}
-
-.forty{
-    display: flex;
-    margin: 20px 80px;
-}
-
-.testi_forth{
-    flex-direction: column;
+.testimonials {
     text-align: center;
-     justify-content: center;
-    align-items: center;
-    width:33.33%;
-    padding: 10px;
+    padding: 60px 20px;  
+    background: #F2EEE9;
 }
 
-.testi_forth h2{
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 18px;
-    font-weight: 400; /* Regular */
-    color: #525560;
-    line-height: 130%;
+.testimonials h2 {
+    font-size: 2.5rem;
+    color: #023F3A;  
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.9rem; /* approx 46-48px */
+    font-weight: 700;
+    line-height: 58px;
     margin-bottom: 40px;
 }
 
-.testi_forth img{
-    border-radius: 100%;
-    height:100px;
-    padding: 15px;
-    width:100px;
+.carousel-container {
+    display: none;
+    opacity: 0;
+    transform: scale(0.96);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.testi_forth h1{
-    font-family: 'Libre Baskerville', serif;
-    font-size: 24px;
-    font-weight: 700;
+.carousel-container.active {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    opacity: 1;
+    transform: scale(1);
+    animation: popFade 0.8s ease-in-out;
+}
+
+@keyframes popFade {
+    0% {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+}
+}
+
+.testimonial {
+    width: 90%;
+    padding: 20px;
+}
+.testimonial p {
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #525560;
+    font-weight: 400;
+    width: 100%;
+    line-height: 130%;
+    margin-bottom: 15px;
+    
+    /* Animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: uploadFade 0.8s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.carousel-container.active .testimonial:nth-child(2) p {
+    animation-delay: 0.6s;
+}
+
+.carousel-container.active .testimonial:nth-child(3) p {
+    animation-delay: 0.8s;
+}
+
+@keyframes uploadFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.testimonial img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 10px;
-    height: 32px;
-    color: #26272c;
-    line-height: 1.6;
+}
+
+.testimonial h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.dots {
+    margin-top: 30px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 6px;
+    background-color: #f8d5bb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.dot.active {
+    background-color: white;
+    border: 2px solid #ff5e14;
 }
 
 footer{
