@@ -2,14 +2,14 @@ const containers = document.querySelectorAll('.carousel-container');
 const dots = document.querySelectorAll('.dot');
 let current = 0;
 
-function showContainer(index) {
+const showContainer = (index) => {
   containers.forEach((c, i) => {
     c.classList.toggle('active', i === index);
     dots[i].classList.toggle('active', i === index);
   });
 }
 
-function nextContainer() {
+const nextContainer = () => {
   current = (current + 1) % containers.length;
   showContainer(current);
 }
@@ -25,6 +25,25 @@ dots.forEach((dot, index) => {
   });
 });
 
+//for rediscovered tastes images
+const produce = document.querySelectorAll('.products');
+let currentProducts =0;
+
+const showProduct =(produced) =>{
+  produce.forEach((e, i)=>{
+    e.classList.toggle('active', i === produced);
+    dots[i].classList.toggle('active', i === produced);
+  });
+}
+
+const nextProduct = () => {
+  currentProducts = (currentProducts + 1) % produce.length;
+  showProduct(currentProducts);
+}
+
+setInterval(nextProduct, 3000);
+
+//home button auto hover
 const buttons = document.querySelectorAll('.auto-hover');
   let toggleIndex = 0;
 
