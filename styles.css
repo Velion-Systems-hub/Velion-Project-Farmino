@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+@import url(./mobile.css);
+@import url(./IpadAir.css);
 
 *{
     margin: 0;
@@ -499,6 +501,42 @@ nav a:hover{
     outline-offset: 2px;               /* gap between dot and border */
 }
 
+.fourth_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:60px 80px;
+}
+.discover{
+    color: #023F3A;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 30px;
+    line-height: 1.2; /* or 120% */
+}
+
+.products{
+     display: none;
+    opacity: 0;
+    transform: scale(0.96);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.products.active{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    opacity: 1;
+    transform: scale(1);
+    animation: popFade 0.8s ease-in-out;
+}
+
+.products img{
+    width: 30rem;
+    height: 320px;
+    padding: 10px;
+}
 
 footer{
     margin: 30px;
