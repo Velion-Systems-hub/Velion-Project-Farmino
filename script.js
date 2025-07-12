@@ -41,7 +41,7 @@ const nextProduct = () => {
   showProduct(currentProducts);
 }
 
-setInterval(nextProduct, 3000);
+setInterval(nextProduct, 5000);
 
 //home button auto hover
 const buttons = document.querySelectorAll('.auto-hover');
