@@ -505,11 +505,13 @@ nav a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:60px;
+    padding: 60px;
 }
 
 .prod{
     border: 2px green solid;
+    margin: 0 auto;
+    width: 100%;
 }
 .discover{
     color: #023F3A;
@@ -531,14 +533,15 @@ nav a:hover{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
-    width:80%;
+    width:70%;
+    margin: 0;
     opacity: 1;
     transform: scale(1);
     animation: popFade 0.8s ease-in-out;
 }
 
 .products img{
-    width: 30rem;
+    width: 20rem;
     height: 320px;
     padding: 10px;
 }
