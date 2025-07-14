@@ -507,12 +507,11 @@ nav a:hover{
     align-items: center;
     padding: 60px;
     width: 100%;
-    height:100%;
-    margin: 20px 100px 20px 0;
+    height:100% ;
+    margin: 20px auto;
 }
 
 .prod{
-    border: 2px green solid;
     margin: 0 auto;
     width: 100%;
 }
@@ -543,6 +542,7 @@ nav a:hover{
 }
 
 .products img{
+    border-radius: 30px;
     width: 350px;
     height: 320px;
     padding: 10px;
