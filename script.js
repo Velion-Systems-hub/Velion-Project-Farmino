@@ -27,12 +27,13 @@ dots.forEach((dot, index) => {
 
 //for rediscovered tastes images
 const produce = document.querySelectorAll('.products');
-let currentProducts =0;
+let currentProducts = 0;
+const proDoted = document.querySelectorAll('.prodot');
 
 const showProduct =(produced) =>{
   produce.forEach((e, i)=>{
     e.classList.toggle('active', i === produced);
-    dots[i].classList.toggle('active', i === produced);
+    proDoted[i].classList.toggle('active', i === produced);
   });
 }
 
@@ -41,7 +42,30 @@ const nextProduct = () => {
   showProduct(currentProducts);
 }
 
-setInterval(nextProduct, 5000);
+let intervalid;
+
+const startInterval = () => {
+  intervalid = setInterval(nextProduct, 5000);
+};
+
+const resetInterval = () => {
+  clearInterval(intervalid);
+  startInterval();
+};
+
+
+
+//dotes click override
+proDoted.forEach((dote, produced) =>{
+  dote.addEventListener('click', () => {
+    currentProducts = produced;
+    showProduct(currentProducts);
+    resetInterval(); //reset the transition timer when clicked
+  });
+});
+
+startInterval(); //start auto-transition initially
+
 
 //home button auto hover
 const buttons = document.querySelectorAll('.auto-hover');
