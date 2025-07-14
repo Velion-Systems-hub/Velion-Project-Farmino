@@ -508,6 +508,9 @@ nav a:hover{
     padding:60px;
 }
 
+.prod{
+    border: 2px green solid;
+}
 .discover{
     color: #023F3A;
     font-family: 'Libre Baskerville', serif;
