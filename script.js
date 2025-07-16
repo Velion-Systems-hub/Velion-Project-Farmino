@@ -77,3 +77,29 @@ const buttons = document.querySelectorAll('.auto-hover');
     toggleIndex = (toggleIndex + 1) % buttons.length;
   }, 2000); // Switch every 2 seconds
 
+// video playuback
+const videos = document.querySelectorAll('.video');
+let currentIndes = 0;
+const playBtn = document.getElementById('playBtn');
+
+const playVideo = (indes) => {
+  videos.forEach((video, i) => {
+    video.pause();
+    video.currentTime = 0;
+    video.classList.remove('active');
+  });
+
+  const video = videos[indes];
+  video.classList.add('active');
+  video.play();
+
+  video.onended = () => {
+    const next = (indes + 1) % videos.length;
+    playVideo(next);
+  };
+};
+
+playBtn.addEventListener('click', () => {
+  playBtn.style.display = 'none';
+  playVideo(currentIndes);
+});
