@@ -1,0 +1,33 @@
+/* IpadAir.css */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .heading {
+    padding: 12px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav_left {
+    margin-left: 30px;
+  }
+
+  nav {
+    padding: 10px 0;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 15px;
+    padding: 8px 15px;
+  }
+
+  .navbar {
+    margin-right: 20px;
+  }
+
+  .btn {
+    padding: 8px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

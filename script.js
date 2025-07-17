@@ -105,35 +105,23 @@ playBtn.addEventListener('click', () => {
   playVideo(currentVids);
 });
 
-/*
-// Video playback
-const videos = document.querySelectorAll('.video');
-let currentIndex = 0;
-const playBtn = document.getElementById('playBtn');
+//Form validation
+  document.getElementById('contactForm').addEventListener('submit', function(a) {
+  a.preventDefault();
 
-// Function to play a video by index
-const playVideo = (index) => {
-  videos.forEach((video, i) => {
-    video.pause();
-    video.currentTime = 0;
-    video.classList.remove('active');
-  });
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const successMsg = document.getElementById('successMsg');
 
-  const video = videos[index];
-  video.classList.add('active');
-  video.play();
-
-  // When current video ends, play the next one
-  video.onended = () => {
-    currentIndex = (index + 1) % videos.length;
-    playVideo(currentIndex);
-  };
-};
-
-// Play on first click, then loop through videos automatically
-playBtn.addEventListener('click', () => {
-  playBtn.style.display = 'none';
-  playVideo(currentIndex);
+  if (email && message) {
+    successMsg.textContent = "Message sent successfully!";
+    successMsg.style.color = "green";
+    this.reset();
+    setTimeout(() => {
+      successMsg.textContent = "";
+    }, 3000);
+  } else {
+    successMsg.textContent = "Please fill in all fields, Thanks.";
+    successMsg.style.color = "red";
+  }
 });
-
-*/
