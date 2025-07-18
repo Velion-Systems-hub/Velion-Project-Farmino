@@ -79,27 +79,49 @@ const buttons = document.querySelectorAll('.auto-hover');
 
 // video playuback
 const videos = document.querySelectorAll('.video');
-let currentIndes = 0;
+let currentVids = 0;
 const playBtn = document.getElementById('playBtn');
 
-const playVideo = (indes) => {
+const playVideo = (vids) => {
   videos.forEach((video, i) => {
     video.pause();
     video.currentTime = 0;
     video.classList.remove('active');
   });
 
-  const video = videos[indes];
+  const video = videos[vids];
   video.classList.add('active');
+  video.playbackRate = 3; // ⏩ Set playback speed here
   video.play();
 
   video.onended = () => {
-    const next = (indes + 1) % videos.length;
-    playVideo(next);
+    const next = (vids + 1) % videos.length;
+    playVideo(currentVids = next);
   };
 };
 
 playBtn.addEventListener('click', () => {
   playBtn.style.display = 'none';
-  playVideo(currentIndes);
+  playVideo(currentVids);
+});
+
+//Form validation
+  document.getElementById('contactForm').addEventListener('submit', function(a) {
+  a.preventDefault();
+
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const successMsg = document.getElementById('successMsg');
+
+  if (email && message) {
+    successMsg.textContent = "Message sent successfully!";
+    successMsg.style.color = "green";
+    this.reset();
+    setTimeout(() => {
+      successMsg.textContent = "";
+    }, 3000);
+  } else {
+    successMsg.textContent = "Please fill in all fields, Thanks.";
+    successMsg.style.color = "red";
+  }
 });

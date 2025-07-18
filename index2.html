@@ -3,55 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Switching Button Hover</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .button-wrapper {
-      display: flex;
-      gap: 20px;
-    }
-
-    .auto-hover {
-      padding: 12px 24px;
-      font-size: 16px;
-      border: none;
-      background: #fff;
-      color: #023F3A;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-      cursor: pointer;
-      transition: background-color 0.3s, color 0.3s;
-      border-radius: 6px;
-    }
-
-    .auto-hover.hovered {
-      background-color: #023F3A;
-      color: #fff;
-    }
-  </style>
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="button-wrapper">
-    <button class="auto-hover btn1">Button One</button>
-    <button class="auto-hover btn2">Button Two</button>
+  <style>
+ body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.contact-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.success {
+  margin-top: 15px;
+  text-align: center;
+  color: green;
+  font-weight: 500;
+}
+
+
+  </style>
+  <div class="contact-form">
+    <form id="contactForm" action="#" method="post">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <input type="submit" value="Send">
+      <p class="success" id="successMsg"></p>
+    </form>
   </div>
 
   <script>
-    const buttons = document.querySelectorAll('.auto-hover');
-    let current = 0;
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
 
-    setInterval(() => {
-      buttons.forEach(btn => btn.classList.remove('hovered'));
-      buttons[current].classList.add('hovered');
-      current = (current + 1) % buttons.length;
-    }, 2000); // Switch every 3 seconds
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const successMsg = document.getElementById('successMsg');
+
+  if (email && message) {
+    successMsg.textContent = "Message sent successfully!";
+    successMsg.style.color = "green";
+    this.reset();
+    setTimeout(() => {
+      successMsg.textContent = "";
+    }, 3000);
+  } else {
+    successMsg.textContent = "Please fill in all fields.";
+    successMsg.style.color = "red";
+  }
+});
+
   </script>
 </body>
 </html>
