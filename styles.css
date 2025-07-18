@@ -520,7 +520,9 @@ nav a:hover, a.btnn:hover{
     height:100% ;
 }
 .prod{
-    padding: 20px 8rem;
+    padding: 20px 38%;
+    border: #000 solid 2px;
+    width: 80%;
 }
 
 .discover{
@@ -543,8 +545,9 @@ nav a:hover, a.btnn:hover{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    width:70%;
+    width:80%;
     opacity: 1;
     transform: scale(1);
     animation: popFade 0.8s ease-in-out;
