@@ -548,7 +548,7 @@ nav a:hover, a.btnn:hover{
     justify-content: center;
     gap: 10px;
     width:50%;
-    margin: 0 40%;
+    margin: 0 auto;
     opacity: 1;
     transform: scale(1);
     animation: popFade 0.8s ease-in-out;
