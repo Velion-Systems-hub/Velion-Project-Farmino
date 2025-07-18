@@ -516,14 +516,13 @@ nav a:hover, a.btnn:hover{
     flex-direction: column;
     align-items: center;
     padding: 60px;
-    width: 100%;
+    width: 100vw;
     height:100% ;
-    margin: 20px auto;
+    margin: 20px 0;
 }
 
 .prod{
-    margin: 0 20px;
-    width: 100%;
+    border: #000 solid 2px;
 }
 .discover{
     color: #023F3A;
@@ -743,28 +742,28 @@ nav a:hover, a.btnn:hover{
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0,0,0,0.08);
   width: 100%;
-  margin: 10px 10px;
   max-width: 500px;
   height: 510px;
+  display: flex;
+  flex-direction: column;
 }
 
-form{
-    width: 100%;
-    height: 100%;
-}
+form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
 
 label {
   display: block;
   margin-bottom: 8px;
-  font-weight: bold;
+  font-weight: 500;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
   color: #333F51;
-  font-weight: 500; 
 }
 
-input[type="email"],
-textarea {
+input[type="email"]{
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -772,6 +771,16 @@ textarea {
   border-radius: 5px;
   box-sizing: border-box;
 }
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    flex-grow: 1;
+    margin-bottom: 20px;
+  }
 
 input[type="submit"] {
   background-color: #023F3A;
