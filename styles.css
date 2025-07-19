@@ -489,6 +489,8 @@ nav a:hover, a.btnn:hover{
     height: 12px;
     width: 12px;
     margin: 0 6px;
+    align-items: center;
+    justify-content: center;
     background-color: #f8d5bb;
     border-radius: 50%;
     display: inline-block;
@@ -515,14 +517,10 @@ nav a:hover, a.btnn:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px;
-    width: 100vw;
-    height:100% ;
-}
-.prod{
-    padding: 20px 38%;
-    border: #000 solid 2px;
+    justify-content: center;
+    padding: 60px 0;
     width: 100%;
+    height:100% ;
 }
 
 .discover{
@@ -545,20 +543,19 @@ nav a:hover, a.btnn:hover{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
-    justify-content: center;
     gap: 10px;
-    width:100%;
-    margin: 0 auto;
+    margin: 10px 80px 10px 80px;
+    width:90%;
     opacity: 1;
-    transform: scale(1);
-    animation: popFade 0.8s ease-in-out;
+    transform: scale(0.99);
+    animation: popFade 1.5s ease-in-out;
 }
 
 .products img{
     border-radius: 30px;
     width: 350px;
     height: 320px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .products h2{
