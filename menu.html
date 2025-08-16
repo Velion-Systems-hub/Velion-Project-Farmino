@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="navbar">
+  <div class="logo">
+    <img src="logo.png" alt="Farmino Logo">
+  </div>
+  
+  <!-- Desktop Navigation -->
+  <nav class="desktop-nav mobile-nav">
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+  
+  <!-- Mobile Hamburger Button (Hidden by Default) -->
+  <button class="mobile-menu-btn">☰</button>
+  
+  <!-- Mobile Navigation (Hidden by Default) 
+  <nav class="">
+    <a href="#">Home</a>
+    <a href="#">Products</a>              08072948863
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>-->
+</header>
+<style>
+    /* Base Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 40px; /* Adjust as needed */
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.desktop-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.mobile-menu-btn {
+  display: none; /* Hidden on desktop */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none; /* Hide desktop menu on mobile */
+  }
+  
+  .mobile-menu-btn {
+    display: block; /* Show hamburger button */
+  }
+  
+  /* Show mobile menu when active (via JavaScript) */
+  .mobile-nav.active {
+    display: flex;
+  }
+}
+</style>
+
+<script>
+    const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+const mobileNav = document.querySelector(".mobile-nav");
+
+mobileMenuBtn.addEventListener("click", () => {
+  mobileNav.classList.toggle("active");
+});
+</script>
+</body>
+</html>

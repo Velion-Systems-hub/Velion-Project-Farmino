@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    box-sizing: border-box;
+    font-family: 'poppins', 'sans-serif';
+}
+
+.container{
+    position: fixed;
+    padding: 10px 50px;
+    display: flex;
+    top: 0;
+    bottom: 20;
+    z-index: 10000;
+    width: 100%;
+    margin-bottom: 300px;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+ul a{
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 2px;
+    color: #18191F;
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 26.6px;
+    font-size: 16px;
+    font-weight: 600; /* semibold */
+
+}
+
+ul a:hover, a.btnn:hover{
+    background: rgb(68, 129, 68);
+    color: #fff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    transition: .1s;
+}
+
+
+.btn{
+    background: #ff0000;
+    box-shadow: 3px 5px 5px 0 rgba(0, 0, 0, 0.3);
+    padding: 5px 13px;
+    margin-left: 30px;
+    margin-right: 20px;
+    border-radius: 2px;
+    color: #fff;
+}
+
+#main-contact{
+    background: url(../Assets/ridgings.png) no-repeat center center;
+    margin-bottom: 270px;
+    margin-top:500px;
+    margin: 0;
+  height: 70vh;
+  background-size: cover;
+  top: 7dvh;
+  opacity: 0.8;
+  position: relative; /* ensures text sits on top */
+
+}
+
+#main-contact h1{
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    font-size: 56px;
+    font-family: 'Libre Baskerville', serif;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.const{
+    margin-top: 130px;
+    display: flex;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    width: 100%;
+
+}
+
+.contact-details{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+.contact-form {
+    background: #fff;
+    padding: 30px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 500px;
+    height: 510px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  form {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    color: #333F51;
+  }
+  
+  input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: none;
+      flex-grow: 1;
+      margin-bottom: 20px;
+    }
+  
+  input[type="submit"] {
+    background-color: #023F3A;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #02140f;
+  }
+  
+  .success {
+    margin-top: 15px;
+    text-align: center;
+    color: green;
+    font-weight: 500;
+  }
+  
