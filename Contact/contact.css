@@ -6,6 +6,11 @@
     font-family: 'poppins', 'sans-serif';
 }
 
+body{
+    background: #F2EEE9;
+}
+
+
 .container{
     position: fixed;
     padding: 10px 50px;
@@ -13,6 +18,7 @@
     top: 0;
     bottom: 20;
     z-index: 10000;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
     width: 100%;
     margin-bottom: 300px;
     align-items: center;
@@ -55,7 +61,7 @@ ul a:hover, a.btnn:hover{
 }
 
 #main-contact{
-    background: url(../Assets/ridgings.png) no-repeat center center;
+    background: url(../Assets/ridges.png) no-repeat center center;
     margin-bottom: 270px;
     margin-top:500px;
     margin: 0;

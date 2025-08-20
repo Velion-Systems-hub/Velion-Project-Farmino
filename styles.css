@@ -35,36 +35,28 @@ html{
     scroll-behavior: smooth;
 }
 
-.heading{
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-    background: #fff;
-    position: sticky;
+
+.container{
     position: fixed;
-    left: 0;
-    right: 0;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-between;
+    padding: 10px 50px;
+    display: flex;
     top: 0;
-    display: flex;
-    z-index: 10;
-}
-
-.nav_left{
-    margin-left: 80px;
-    padding: 8px;
+    bottom: 20;
+    z-index: 10000;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin-bottom: 300px;
     align-items: center;
+    justify-content: space-between;
+    background: #fff;
 }
 
-nav{
+.navbar ul{
     display: flex;
-    padding: 15px;
-    align-items: center;
-    justify-content: center;
 }
 
-nav a {
-    padding: 10px 20px;
+ul a{
+    padding: 5px 20px;
     text-decoration: none;
     border-radius: 2px;
     color: #18191F;
@@ -72,24 +64,21 @@ nav a {
     line-height: 26.6px;
     font-size: 16px;
     font-weight: 600; /* semibold */
+
 }
 
-
-.navbar{
-    margin-right: 60px;
-}
-
-nav a:hover, a.btnn:hover{
+ul a:hover, a.btnn:hover{
     background: rgb(68, 129, 68);
     color: #fff;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
     transition: .1s;
 }
 
+
 .btn{
     background: #ff0000;
     box-shadow: 3px 5px 5px 0 rgba(0, 0, 0, 0.3);
-    padding: 8px 13px;
+    padding: 5px 13px;
     margin-left: 30px;
     margin-right: 20px;
     border-radius: 2px;
@@ -628,7 +617,7 @@ nav a:hover, a.btnn:hover{
   }
 
   .content {
-    width: 74.17%;
+    width: 70.17%;
     height: 100%;
     max-width: 600px;
     margin: 0;
