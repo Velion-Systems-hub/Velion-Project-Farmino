@@ -21,21 +21,37 @@
 
 </head>
 <body>
-    <header class="contact-header">
-        <div class="contact-logo container">
-            <a href="#" class="logo nav_left"><img src="../Assets/logo.png" height="30" width="150" alt="logo"> </a>
-        <nav class="navbar" id="navbar">
-            <ul>
-            <a href="../index.html">Home</a>
-            <a href="../About/About.html">About us</a>
-            <a href="./media003.html" class="gig">Partners</a>
-            <a href="./login.html" class="gig">How it works</a>
-            <a href="./sam/media004.html">Support</a>
-            <a href="./sam/media.html" class="btn">Buy now</a>
-            </ul>
-        </nav>
+    <header class="contact-header container">
+    <div class="contact-logo">
+      <a href="#" class="logo nav_left">
+        <img src="../Assets/logo.png" height="30" width="150" alt="logo">
+      </a>
     </div>
-    </header>
+
+    <!-- Desktop Nav -->
+    <nav class="desktop-nav">
+      <a href="../index.html">Home</a>
+      <a href="../About/About.html">About us</a>
+      <a href="./media003.html" class="gig">Partners</a>
+      <a href="./login.html" class="gig">How it works</a>
+      <a href="./sam/media004.html">Support</a>
+      <a href="./sam/media.html" class="btn">Buy now</a>
+    </nav>
+
+    <!-- Mobile Hamburger Button -->
+    <button class="mobile-menu-btn">☰</button>
+
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav">
+      <a href="../index.html">Home</a>
+      <a href="../About/About.html">About us</a>
+      <a href="./media003.html" class="gig">Partners</a>
+      <a href="./login.html" class="gig">How it works</a>
+      <a href="./sam/media004.html">Support</a>
+      <a href="./sam/media.html" class="btn">Buy now</a>
+    </nav>
+  </header>
+
 
     <section id="main-contact">
         <h1>Contact</h1>
@@ -122,5 +138,6 @@
         <h3>&copy;2022 Farmino | All Right Reserved</h3>
     </footer>
     <script src="./contact.js"></script>
+    <script src="../responsive.js"></script>
 </body>
 </html>
