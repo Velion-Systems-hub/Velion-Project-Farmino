@@ -790,6 +790,7 @@ input[type="email"]{
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size:12px;
   box-sizing: border-box;
 }
 
@@ -798,10 +799,11 @@ textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size:12px;
     resize: none;
     flex-grow: 1;
     margin-bottom: 20px;
-  }
+}
 
 input[type="submit"] {
   background-color: #023F3A;
@@ -809,6 +811,8 @@ input[type="submit"] {
   border: none;
   padding: 12px;
   width: 100%;
+   font-size: 16px;
+  letter-spacing: 1.55px;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;

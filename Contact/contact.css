@@ -135,6 +135,24 @@ body {
   justify-content: center;
 }
 
+.contact-details h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 250;
+  font-size: 22px;
+  line-height: 1.2;
+  margin-top: 14px;
+  color: #18191f;
+}
+
+.contact-details h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #525560;
+  line-height: 1.3;
+  margin-top: 5px;
+}
+
 .contact-form {
   background: #fff;
   padding: 30px;
@@ -167,6 +185,7 @@ label {
 input[type='email'] {
   width: 100%;
   padding: 10px;
+  font-size: 12px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -179,6 +198,7 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   resize: none;
+  font-size: 12px;
   flex-grow: 1;
   margin-bottom: 20px;
 }
@@ -189,6 +209,8 @@ input[type='submit'] {
   border: none;
   padding: 12px;
   width: 100%;
+  font-size: 16px;
+  letter-spacing: 1.55px;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
@@ -298,6 +320,7 @@ footer h3 {
   font-size: 14px;
   padding-bottom: 10px;
 }
+
 /* Responsiveness */
 @media (max-width: 768px) {
   .desktop-nav {
@@ -322,36 +345,34 @@ footer h3 {
     display: none;
   }
 
-  
-.mobile-nav a:hover,
-.mobile-nav a.btnn:hover {
-  background: rgba(68, 129, 68, 0.452);
-  color: #310606;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.1s;
-}
+  .mobile-nav a:hover,
+  .mobile-nav a.btnn:hover {
+    background: rgba(68, 129, 68, 0.452);
+    color: #310606;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.1s;
+  }
 
-.mobile-nav a {
-  margin: 0;
-  text-decoration: none;
-  width: 100%;
-  border-bottom: #023f3a18 1px solid;
-  font-weight: 600;
-  padding:5px 20px;
-  color: #18191f;
-  border-radius: 2px;
-  font-family: 'Josefin Sans', sans-serif;
-  line-height: 22.6px;
-  font-size: 12px;
-}
+  .mobile-nav a {
+    margin: 0;
+    text-decoration: none;
+    width: 100%;
+    border-bottom: #023f3a18 1px solid;
+    font-weight: 600;
+    padding: 5px 20px;
+    color: #18191f;
+    border-radius: 2px;
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 22.6px;
+    font-size: 12px;
+  }
 
-
-.mobile-nav .btn {
-  background: #ff0000;
-  box-shadow: 3px 5px 5px 0 rgba(0, 0, 0, 0.3);
-  border-radius: 2px;
-  color: #fff;
-}
+  .mobile-nav .btn {
+    background: #ff0000;
+    box-shadow: 3px 5px 5px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    color: #fff;
+  }
 
   .mobile-menu-btn {
     display: block;
@@ -367,9 +388,87 @@ footer h3 {
     background-size: cover;
   }
 
+  #main-contact h1 {
+    font-size: 3em;
+  }
 
+  .const {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two columns */
+    grid-template-rows: auto auto; /* two rows */
+    gap: 20px;
+    padding: 10px 15px; /* spacing between items */
+    justify-items: center; /* center horizontally */
+    align-items: center; /* center vertically */
+    width: 100%;
+  }
+
+  .item1 {
+    grid-column: 1; /* top-left */
+    grid-row: 1;
+  }
+
+  .item2 {
+    grid-column: 2; /* top-right */
+    grid-row: 1;
+  }
+
+  .item3 {
+    grid-column: 1 / span 2; /* span across both columns */
+    grid-row: 2; /* bottom row */
+    justify-self: center; /* center horizontally */
+  }
+
+  .contact-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 90%;
+    height: 350px;
+  }
+
+  label {
+    margin-bottom: 5px;
+    font-size: 1rem;
+  }
+
+  input[type='email'] {
+    font-size: 0.8rem;
+  }
+
+  textarea {
+    font-size: 0.8rem;
+  }
+
+  input[type='submit'] {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+   }
+
+   iframe{
+    height: 300px;
+   }
 
   footer {
-    display: none;
+    display: grid;
+    grid-template-columns:1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-container{
+    display: grid;
+    width: 100%;
+      gap: 30px;
+    grid-template-columns:1fr 1fr;
+     justify-content: center;
+    /* align-items: center; */
   }
 }
