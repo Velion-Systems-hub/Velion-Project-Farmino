@@ -398,7 +398,7 @@ footer h3 {
     grid-template-columns: 1fr 1fr; /* two columns */
     grid-template-rows: auto auto; /* two rows */
     gap: 20px;
-    padding: 10px 15px; /* spacing between items */
+    padding: 10px 25px; /* spacing between items */
     justify-items: center; /* center horizontally */
     align-items: center; /* center vertically */
     width: 100%;
@@ -428,6 +428,10 @@ footer h3 {
     justify-content: center;
   }
 
+  .contact-details h3{
+    font-size: 12px;
+  }
+
   .contact-form {
     width: 100%;
     max-width: 90%;
@@ -455,7 +459,6 @@ footer h3 {
    iframe{
     height: 300px;
    }
-
   footer {
     display: grid;
     grid-template-columns:1fr;
@@ -463,11 +466,24 @@ footer h3 {
     align-items: center;
   }
 
+  .produucts{
+    display: none;
+  }
+
+  .footer-logo img{
+    width: 100%;
+  }
+
+  
+.social-icons a {
+  margin-right: 0px;
+}
+
   .footer-container{
     display: grid;
     width: 100%;
       gap: 30px;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr;
      justify-content: center;
     /* align-items: center; */
   }
