@@ -665,10 +665,13 @@ footer h3 {
     height: 20rem;
   }
 
-  .play-button {
-    font-size: 35px;
-    background-color: rgba(15, 13, 13, 0.9);
-  }
+   .play-button {
+        font-size: 40px;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+    }
+    
 
   .play-button:hover {
     background-color: rgba(0, 0, 0, 0.7);

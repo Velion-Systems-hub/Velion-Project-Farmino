@@ -1236,6 +1236,7 @@ footer h3 {
     }
     .fifth-section {
         padding: 40px 20px;
+        margin-bottom: 100px;
     }
     .fifth{
         display: grid;
@@ -1247,28 +1248,98 @@ footer h3 {
     .video-container {
         height: 250px;
     }
+
+    .play-button {
+        font-size: 40px;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+    }
+
+    .play-button:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
     .content {
         width: 100%;
         max-width: 100%;
         height: auto;
         margin: 0;
     }
+
     .content h2 {
         font-size: 24px;
         width: 100%;
         height: auto;
         margin-bottom: 15px;
     }
+
     .content p {
         font-size: 14px;
         width: 100%;
         height: auto;
         margin-bottom: 15px;
     }
+
     .btnn {
         font-size: 12px;
         padding: 10px 20px;
         margin-top: 10px;
+    }
+
+    .sixth-container{
+        margin-bottom: 100px;
+        padding-top: 20px;
+    }
+
+    .contacts{
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-in{
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        padding: 0;
+    }
+    .contact-details{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0 0 0;
+        width: 100%;
+    }
+    .contact-details h1{
+        font-size: 19px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .contact-details h3{
+        font-size: 12px;
+        width: 100%;
+        height: auto;
+    }
+    .social-icons {
+        margin-top: 8px;
+        gap: 8px;
+        font-size: 4px;
+    }
+    .contact-form {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-top: 30px;
+    }
+    form {
+        flex: 1;
     }
 
 
