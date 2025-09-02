@@ -1049,7 +1049,7 @@ footer h3 {
 .missions_phyle{
     display: grid;
     grid-template-columns: 1fr;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     width: 90%;
     margin: 0 auto;
 }
