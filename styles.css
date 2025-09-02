@@ -986,7 +986,7 @@ footer h3 {
 
 .first_section {
     margin: 60px 0 60px 0;
-    height: 70vh;
+    height: 60vh;
     background-size: cover;
     background-position: center bottom; /* Keep the wave shape at bottom */
 }
@@ -1004,8 +1004,9 @@ footer h3 {
 }
 
 .writeups h1{
-    font-size: 30px;
-    margin:70px 0 0 0;
+    font-size: 27px;
+    margin:20px 0 0 0;
+    width: 100%;
     letter-spacing: 0px;
     word-spacing: 0px;
 }
@@ -1042,7 +1043,7 @@ footer h3 {
 }
 
 .second-section{
-    margin: 120px 0 0 0;
+    margin: 50px 0 0 0;
 }
 
 .missions_phyle{
