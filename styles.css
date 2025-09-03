@@ -1236,7 +1236,7 @@ footer h3 {
     }
     .fifth-section {
         padding: 40px 20px;
-        margin-bottom: 100px;
+        height: 116vh;
     }
     .fifth{
         display: grid;
@@ -1288,7 +1288,7 @@ footer h3 {
     }
 
     .sixth-container{
-        margin-bottom: 100px;
+        margin-bottom: 40px;
         padding-top: 20px;
     }
 
@@ -1304,6 +1304,7 @@ footer h3 {
     .contact-in{
         grid-template-columns: 1fr 1fr;
         width: 100%;
+        gap: 30px;
         padding: 0;
     }
     .contact-details{
@@ -1316,14 +1317,19 @@ footer h3 {
         width: 100%;
     }
     .contact-details h1{
-        font-size: 19px;
+        font-size: 15px;
         width: 100%;
         height: auto;
         margin-bottom: 0;
     }
 
+.contact-details img{
+    width: 40px;
+    height: 40px;
+}
+
     .contact-details h3{
-        font-size: 12px;
+        font-size: 11px;
         width: 100%;
         height: auto;
     }
@@ -1332,6 +1338,38 @@ footer h3 {
         gap: 8px;
         font-size: 4px;
     }
+
+    .social-icons i{
+        font-size: 16px;
+    }
+
+    
+  .contact-form {
+    width: 100%;
+    max-width: 90%;
+    height: 450px;
+  }
+
+  label {
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+  }
+
+  input[type='email'] {
+    font-size: 1rem;
+  }
+
+  textarea {
+    font-size: 1rem;
+    height: 150px;
+  }
+
+  input[type='submit'] {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+   }
+
+
     .contact-form {
         width: 100%;
         max-width: 100%;
@@ -1341,8 +1379,6 @@ footer h3 {
     form {
         flex: 1;
     }
-
-
 
   footer {
     display: grid;
@@ -1365,5 +1401,6 @@ footer h3 {
       gap: 30px;
     grid-template-columns:1fr;
      justify-content: center;
+    /* align-items: center; */
   }
 }
