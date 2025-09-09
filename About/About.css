@@ -470,6 +470,21 @@ body {
   outline-offset: 2px; /* gap between dot and border */
 }
 
+.team {
+  text-align: center;
+  padding: 60px 20px;
+}
+.team h2 {
+  font-size: 2.5rem;
+  color: #023f3a;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.9rem; /* approx 46-48px */
+  font-weight: 700;
+  line-height: 58px;
+  margin-bottom: 40px;
+}
+
+
 footer {
   margin: 0;
   padding: 50px 60px 30px 60px; /* balanced spacing */
