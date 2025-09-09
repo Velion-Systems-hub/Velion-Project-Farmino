@@ -99,7 +99,7 @@ body {
 }
 
 #main-product {
-  background: url(../Assets/products/tomatoes/tomatoes.png) no-repeat center 50%;
+  background: url(../Assets/products/single_product/tomatoes.png) no-repeat center 50%;
   margin-bottom: 45dvh; /* Dynamic viewport height for margin */
   margin: 0;
   height: 70dvh; /* Viewport height for main product section */
@@ -184,40 +184,45 @@ body {
 
 .second > div h2 {
   font-size: 32px; /* Fixed pixel unit for font-size */
-  font-weight: 500;
+  font-weight: 400;
+  letter-spacing: none;
   line-height: 1.2; /* Unitless line-height */
   font-family: 'Libre Baskerville', serif;
   margin-bottom: 3.5dvh; /* Dynamic viewport height for margin */
-  color: #003319;
+  color: #023F3A;
 }
 
 .second > div h3 {
-  font-size: 25px; /* Fixed pixel unit for font-size */
+  font-size: 26px; /* Fixed pixel unit for font-size */
   font-weight: 700;
+  letter-spacing: none;
   font-family: 'Libre Baskerville', serif;
   margin-bottom: 3.476dvh; /* Dynamic viewport height for margin */
-  color: #003319;
+  color: #023F3A;
 }
 
 .second .left p {
   line-height: 1.5; /* Unitless line-height */
   margin-bottom: 1.8rem; /* Relative unit for margin */
-  text-align: left;
+  text-align: justify;
   font-size: 18px; /* Fixed pixel unit for font-size */
   font-family: 'Josefin Sans', sans-serif;
   color: #333;
+  font-weight: 400;
+  letter-spacing: none;
 }
 
 .second .right span{
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 1dvw; /* Dynamic viewport height for gap */
 }
 
 .second .right span h5{
-  line-height: 1.5; /* Unitless line-height */
+  line-height: 1; /* Unitless line-height */
   text-align: left;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px; /* Fixed pixel unit for font-size */
   font-family: 'Libre Baskerville', serif;
   color: #333;
@@ -231,11 +236,9 @@ body {
 }
 
 .second .right img {
-  max-width: 3dvw;
-  height: auto;
-  border-radius: 3dvh; /* Dynamic viewport height for border-radius */
-  object-fit: cover;
-  border-radius: 100dvw; /* Fully rounded for circular image */;
+  width: 46px;
+  height: 46px;
+  object-fit: cover;/* Fully rounded for circular image */;
 }
 
 .third {
@@ -245,11 +248,13 @@ body {
 }
 
 .third h1{
-  font-size: 45px; /* Fixed pixel unit for font-size */
+  font-size: 48px; /* Fixed pixel unit for font-size */
   font-weight: 400;
+  line-height: 1;
+  letter-spacing: none;
   font-family: 'Libre Baskerville', serif;
   margin-bottom: 3.5dvh; /* Dynamic viewport height for margin */
-  color: #003319;
+  color: #023F3A;
 }
 
 .cards {
@@ -272,13 +277,13 @@ body {
 }
 
 #card_1{
-  background-image: url(../Assets/products/tomatoes/product1.png);
+  background-image: url(../Assets/products/single_product/product1.png);
 }
 #card_2{
-  background-image: url(../Assets/products/tomatoes/product2.png);
+  background-image: url(../Assets/products/single_product/product2.png);
 }
 #card_3{
-  background-image: url(../Assets/products/tomatoes/product3.png);
+  background-image: url(../Assets/products/single_product/product3.png);
 }
 
 .overlay {
@@ -290,11 +295,12 @@ body {
 .overlay h2 {
   font-family: 'Libre Baskerville', serif;
   font-size: 24px; /* Fixed pixel unit for font-size */
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 2dvh; /* Dynamic viewport height for margin */
   width: 25dvw; /* Dynamic viewport width for width */
   height: 5.6dvh; /* Dynamic viewport height for height */
-  line-height: 1.6;
+  line-height: 32px;
+  letter-spacing: none;
   /* Animation */
   opacity: 0;
   transform: translateY(3.5dvh); /* Dynamic viewport height for transform */
@@ -327,7 +333,7 @@ body {
   text-align: center;
   padding-top: 4dvh; /* Dynamic viewport height for padding */
   padding-bottom: 4dvh; /* Dynamic viewport height for padding */
-  background: linear-gradient(to bottom, #fff 50%, #003319 50%);
+  background: linear-gradient(to bottom, #fff 50%, #023F3A 50%);
 }
 
 .fourth .container{
@@ -338,12 +344,14 @@ body {
   gap: 3dvw; /* Dynamic viewport width for gap */
 }
 .fourth .container .left h1 {
-  font-size: 45px; /* Fixed pixel unit for font-size */
+  font-size: 48px; /* Fixed pixel unit for font-size */
   font-weight: 700;
+  letter-spacing: none;
+  line-height: 1.2;
   font-family: 'Libre Baskerville', serif;
   margin-top: 3.5dvh; /* Dynamic viewport height for margin */
   margin-bottom: 3.5dvh; /* Dynamic viewport height for margin */
-  color: #003319;
+  color: #023F3A;
   text-align: left;
 }
 
@@ -353,6 +361,7 @@ body {
   font-size: 18px; /* Fixed pixel unit for font-size */
   font-family: 'Josefin Sans', sans-serif;
   color: #333;
+  font-weight: 400;
   width: 65%; /* Percentage value for width */
 }
 
@@ -398,6 +407,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 2dvw; /* Dynamic viewport width for gap */
+  padding: 0px 10px;
 }
 
 .footer-container .container {
@@ -596,32 +606,35 @@ footer h3 {
   }
 
   .second > div h2 {
-    font-size: 28px; /* Adjusted for mobile */
+    font-size: 25px; /* Adjusted for mobile */
     margin-bottom: 2dvh;
-    text-align: center;
+    text-align: left;
   }
 
   .second > div h3 {
-    font-size: 22px; /* Adjusted for mobile */
+    font-size: 20px; /* Adjusted for mobile */
     margin-bottom: 2dvh;
-    text-align: center;
   }
 
   .second .left p {
-    font-size: 16px; /* Adjusted for mobile */
-    text-align: center;
+    font-size: 15px; /* Adjusted for mobile */
+    text-align: justify;
   }
 
   .second .right {
-    align-items: center;
+    padding-left: 20px;
   }
 
   .second .right span h5 {
     font-size: 18px; /* Adjusted for mobile */
   }
 
-  .second .right img {
+  .second .right span img {
     max-width: 8dvw; /* Adjusted for mobile */
+  }
+
+  .second .right span{
+    gap: 3dvw;
   }
 
   .third {
@@ -629,8 +642,7 @@ footer h3 {
   }
 
   .third h1 {
-    font-size: 32px;
-    margin-bottom: 2dvh;
+    font-size: 30px;
     text-align: center;
   }
 
@@ -671,7 +683,7 @@ footer h3 {
   .fourth .container .left p {
     font-size: 16px;
     width: 100%;
-    text-align: center;
+    text-align: justify;
   }
 
   .fourth .container .right {
@@ -697,7 +709,7 @@ footer h3 {
     width: 100%;
     gap: 30px;
     grid-template-columns: 1fr;
-    justify-content: center;
+    justify-content: left;
   }
 
   /* Adjustments for the inner containers to match the about page's stacked layout */
@@ -706,45 +718,42 @@ footer h3 {
     flex-direction: column;
     gap: 15px; /* Adjust gap between elements within a column */
     padding: 0; /* Remove horizontal padding that might push content */
-    align-items: center; /* Center align content within each column */
+    align-items: left; /* Center align content within each column */
   }
 
   .footer-logo img {
-    width: 80%; /* Match about page's logo size */
-    max-width: 150px; /* Prevent it from getting too large */
-    margin: 0 auto; /* Center the logo */
+    width: 100%; /* Match about page's logo size */
+    margin: 0;
     display: block;
   }
 
   .footer-links {
-    text-align: center; /* Center the text for all footer link sections */
+    text-align: left; /* Center the text for all footer link sections */
     width: 100%; /* Ensure it takes full width to center text */
   }
 
   .footer-links h1 {
     font-size: 16px; /* Match about page's h1 size */
     margin-bottom: 15px; /* Match about page's margin */
-    text-align: center;
+    text-align: left;
   }
 
   .link {
     padding: 5px 0; /* Match about page's link padding */
-    text-align: center;
+    text-align: left;
   }
 
   .footer-links a {
-    font-size: 12px; /* Match about page's link font size */
-    margin-bottom: 5px; /* Add margin between links for spacing */
+    font-size: 14px; /* Match about page's link font size */
+    margin-bottom: 8px; /* Add margin between links for spacing */
   }
 
   .footer-links h3 {
-    font-size: 12px; /* Match about page's h3 font size */
-    margin-left: 0; /* Remove left margin */
-    display: block; /* Make it a block element to stack below the link text */
-  }
+    margin-left: 6px; /* Remove left margin */
+   }
 
   .social-icons {
-    text-align: center; /* Center social icons */
+    text-align: left; /* Center social icons */
     margin-top: 10px; /* Add some top margin */
   }
 
@@ -762,8 +771,8 @@ footer h3 {
     padding-bottom: 10px; /* Match about page's padding */
   }
 
-  /* Special handling for .produucts to hide it like the about page */
+  /* Special handling for .produucts to hide it like the about page
   .produucts {
     display: none;
-  }
+  } */
 }
