@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Image carousel (ES6)</title>
+
+  <style>
+    /* Container (responsive). Change aspect-ratio if you want a different height */
+    .img-container {
+      position: relative;
+      width: 100%;
+      max-width: 900px;    /* optional: limit width for demo */
+      margin: 0 auto;
+      aspect-ratio: 16 / 9; /* modern responsive height; fallback handled below */
+      overflow: hidden;
+      background: #111;    /* fallback color while images load */
+    }
+
+    /* stacked images that fill the container */
+    .img-container .imgs {
+      position: absolute;
+      inset: 0;               /* top:0; right:0; bottom:0; left:0 */
+      width: 100%;
+      height: 100%;
+      object-fit: cover;      /* use 'contain' if you want the whole image visible (may show gaps) */
+      opacity: 0;
+      transition: opacity 600ms ease-in-out;
+      pointer-events: none;
+      will-change: opacity;
+    }
+
+    /* visible image */
+    .img-container .imgs.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Optional fallback for browsers without aspect-ratio */
+    @supports not (aspect-ratio: 16/9) {
+      .img-container { padding-top: 56.25%; } /* 16:9 fallback */
+      .img-container .imgs { position:absolute; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Your HTML (use the actual paths you have) -->
+  <div class="img-container" aria-live="polite">
+    <img class="imgs active" src="../Assets/agroc.jpg"  alt="agroc" />
+    <img class="imgs"           src="../Assets/tomato.png" alt="tomato" />
+    <img class="imgs"           src="../Assets/carrot.png" alt="carrot" />
+    <img class="imgs"           src="../Assets/potato.png" alt="potato" />
+    <img class="imgs"           src="../Assets/pea.png"    alt="pea" />
+  </div>
+
+  <!-- ES6 script: place at the end of body -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.querySelector('.img-container');
+      if (!container) return;
+
+      // prevent double initialization if script accidentally runs twice
+      if (container.dataset.carouselInit === '1') return;
+      container.dataset.carouselInit = '1';
+
+      const imgs = Array.from(container.querySelectorAll('.imgs'));
+      if (!imgs.length) return;
+
+      // start on the image that has the 'active' class, otherwise first image
+      let cur = imgs.findIndex(img => img.classList.contains('active'));
+      if (cur === -1) cur = 0;
+
+      // ensure only the current image has the active class/visible opacity on load
+      const showImg = pos => {
+        imgs.forEach((img, i) => {
+          const isActive = i === pos;
+          img.classList.toggle('active', isActive);
+          img.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+        });
+      };
+      showImg(cur);
+
+      // next image function (ES6 arrow)
+      const nextImg = () => {
+        cur = (cur + 1) % imgs.length;
+        showImg(cur);
+      };
+
+      // run every 2000ms (2s)
+      const intervalId = setInterval(nextImg, 2000);
+
+      // clear interval on page unload (good practice)
+      window.addEventListener('beforeunload', () => clearInterval(intervalId));
+    });
+  </script>
+
+</body>
+</html>

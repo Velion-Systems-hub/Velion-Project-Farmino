@@ -27,12 +27,13 @@ dots.forEach((dot, index) => {
 
 //for rediscovered tastes images
 const produce = document.querySelectorAll('.products');
-let currentProducts =0;
+let currentProducts = 0;
+const proDoted = document.querySelectorAll('.prodot');
 
 const showProduct =(produced) =>{
   produce.forEach((e, i)=>{
     e.classList.toggle('active', i === produced);
-    dots[i].classList.toggle('active', i === produced);
+    proDoted[i].classList.toggle('active', i === produced);
   });
 }
 
@@ -41,7 +42,30 @@ const nextProduct = () => {
   showProduct(currentProducts);
 }
 
-setInterval(nextProduct, 5000);
+let intervalid;
+
+const startInterval = () => {
+  intervalid = setInterval(nextProduct, 5000);
+};
+
+const resetInterval = () => {
+  clearInterval(intervalid);
+  startInterval();
+};
+
+
+
+//dotes click override
+proDoted.forEach((dote, produced) =>{
+  dote.addEventListener('click', () => {
+    currentProducts = produced;
+    showProduct(currentProducts);
+    resetInterval(); //reset the transition timer when clicked
+  });
+});
+
+startInterval(); //start auto-transition initially
+
 
 //home button auto hover
 const buttons = document.querySelectorAll('.auto-hover');
@@ -52,4 +76,53 @@ const buttons = document.querySelectorAll('.auto-hover');
     buttons[toggleIndex].classList.add('hovered');
     toggleIndex = (toggleIndex + 1) % buttons.length;
   }, 2000); // Switch every 2 seconds
+
+// video playuback
+const videos = document.querySelectorAll('.video');
+let currentVids = 0;
+const playBtn = document.getElementById('playBtn');
+
+const playVideo = (vids) => {
+  videos.forEach((video, i) => {
+    video.pause();
+    video.currentTime = 0;
+    video.classList.remove('active');
+  });
+
+  const video = videos[vids];
+  video.classList.add('active');
+  video.playbackRate = 3; // ⏩ Set playback speed here
+  video.play();
+
+  video.onended = () => {
+    const next = (vids + 1) % videos.length;
+    playVideo(currentVids = next);
+  };
+};
+
+playBtn.addEventListener('click', () => {
+  playBtn.style.display = 'none';
+  playVideo(currentVids);
+});
+
+//Form validation
+  document.getElementById('contactForm').addEventListener('submit', function(a) {
+  a.preventDefault();
+
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const successMsg = document.getElementById('successMsg');
+
+  if (email && message) {
+    successMsg.textContent = "Message sent successfully!";
+    successMsg.style.color = "green";
+    this.reset();
+    setTimeout(() => {
+      successMsg.textContent = "";
+    }, 3000);
+  } else {
+    successMsg.textContent = "Please fill in all fields, Thanks.";
+    successMsg.style.color = "red";
+  }
+});
 

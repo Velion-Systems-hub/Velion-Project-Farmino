@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .contact-form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 500px;
+      height: 510px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: 500;
+      font-size: 16px;
+      color: #333F51;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: none;
+      flex-grow: 1;
+      margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+      background-color: #023F3A;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #02140f;
+    }
+
+    .success {
+      margin-top: 10px;
+      text-align: center;
+      color: green;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-form">
+    <form id="contactForm" action="#" method="post">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here..."></textarea>
+
+      <input type="submit" value="Send">
+      <p class="success" id="successMsg"></p>
+    </form>
+  </div>
+
+  <script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const successMsg = document.getElementById('successMsg');
+
+  if (email && message) {
+    successMsg.textContent = "Message sent successfully!";
+    successMsg.style.color = "green";
+    this.reset();
+    setTimeout(() => {
+      successMsg.textContent = "";
+    }, 3000);
+  } else {
+    successMsg.textContent = "Please fill in all fields.";
+    successMsg.style.color = "red";
+  }
+});
+
+  </script>
+</body>
+</html>

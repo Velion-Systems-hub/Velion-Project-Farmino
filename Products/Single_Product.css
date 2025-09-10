@@ -1,0 +1,778 @@
+* {
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  box-sizing: border-box;
+  font-family: 'poppins', 'sans-serif';
+}
+
+header{
+  height: 7dvh; /* Dynamic viewport height for header */
+}
+
+body {
+  background: #fff;
+  flex: 1;
+}
+
+.header-container {
+  position: fixed;
+  padding: 2dvh 4dvw; /* Dynamic viewport units for padding */
+  display: flex;
+  top: 0;
+  bottom: 3.5dvh; /* Dynamic viewport height */
+  z-index: 10000;
+  box-shadow: 0 0 0.9dvh 0 rgba(0, 0, 0, 0.2); /* Dynamic viewport height for shadow */
+  width: 100%;
+  margin-bottom: 52dvh; /* Dynamic viewport height for margin */
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a.btnn:hover {
+  background: rgb(68, 129, 68);
+  color: #fff;
+  box-shadow: 0 0 0.869dvh 0 rgba(0, 0, 0, 0.2); /* Dynamic viewport height for shadow */
+  transition: 0.1s;
+}
+
+.desktop-nav .btn {
+  background: #ff0000;
+  box-shadow: 0.521dvw 0.869dvw 0.869dvw 0 rgba(0, 0, 0, 0.3); /* Dynamic viewport units for shadow */
+  margin-left: 2.3dvw; /* Dynamic viewport width for margin */
+  margin-right: 1.5dvw; /* Dynamic viewport width for margin */
+  border-radius: 0.35dvh; /* Dynamic viewport height for border-radius */
+  color: #fff;
+}
+
+.mobile-menu-btn {
+  display: none; /* Hidden on desktop */
+  background: none;
+  border: none;
+  font-size: 1.5rem; /* Relative unit for font size */
+  cursor: pointer;
+}
+
+.mobile-nav {
+  display: none; /* Hidden by default */
+}
+/*  */
+
+.desktop-nav {
+  display: flex;
+  gap: 0.9dvh; /* Dynamic viewport height for gap */
+}
+
+.desktop-nav a {
+  text-decoration: none;
+  padding: 0.9dvh 1.5dvw; /* Dynamic viewport units for padding */
+  font-weight: 600;
+  color: #18191f;
+  border-radius: 0.35dvh; /* Dynamic viewport height for border-radius */
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 26.6px; /* Fixed pixel unit for line-height */
+  font-size: 16px; /* Fixed pixel unit for font-size */
+}
+
+/* Mobile nav (hidden by default) */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  gap: 1rem; /* Relative unit for gap */
+  background: #fff;
+  padding: 1rem; /* Relative unit for padding */
+  position: absolute;
+  top: 12dvh; /* Dynamic viewport height for top position */
+  left: 0;
+  right: 0;
+  box-shadow: 0 0.7dvh 1dvh rgba(0, 0, 0, 0.1); /* Dynamic viewport height for shadow */
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+.mobile-nav.active {
+  display: flex;
+}
+
+#main-product {
+  background: url(../Assets/products/single_product/tomatoes.png) no-repeat center 50%;
+  margin-bottom: 45dvh; /* Dynamic viewport height for margin */
+  margin: 0;
+  height: 70dvh; /* Viewport height for main product section */
+  background-size: cover;
+  top: 7dvh;
+  opacity: 0.8;
+  position: relative; /* ensures text sits on top */
+}
+
+#main-product h1 {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  font-size: 56px; /* Fixed pixel unit for font-size */
+  font-family: 'Libre Baskerville', serif;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.section {
+  padding-left: 10dvw;
+  padding-right: 10dvw;
+}
+.first {
+  padding-top: 8dvh;
+  padding-bottom: 4dvh;
+  margin-top: 6dvh; /* Viewport height for margin */
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: stretch;
+  gap: 2dvw; /* Dynamic viewport width for gap */
+  overflow-y: hidden;
+  height: 90dvh;
+}
+
+.first .left {
+  height: 100%;
+}
+
+.first .left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2dvh; /* Dynamic viewport height for border-radius */
+}
+
+.first .right {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 4dvh; /* Viewport height for gap */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.first .right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2dvh; /* Dynamic viewport height for border-radius */
+  overflow: hidden;
+}
+
+.second{
+  padding-top: 4dvh;
+  padding-bottom: 4dvh;
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  align-items: stretch;
+  gap: 7dvw; /* Dynamic viewport width for gap */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.contents { /* Percentage value for width */
+  height: 100%;/* Dynamic viewport width for max-width */
+}
+
+.second > div h2 {
+  font-size: 32px; /* Fixed pixel unit for font-size */
+  font-weight: 400;
+  letter-spacing: none;
+  line-height: 1.2; /* Unitless line-height */
+  font-family: 'Libre Baskerville', serif;
+  margin-bottom: 3.5dvh; /* Dynamic viewport height for margin */
+  color: #023F3A;
+}
+
+.second > div h3 {
+  font-size: 26px; /* Fixed pixel unit for font-size */
+  font-weight: 700;
+  letter-spacing: none;
+  font-family: 'Libre Baskerville', serif;
+  margin-bottom: 3.476dvh; /* Dynamic viewport height for margin */
+  color: #023F3A;
+}
+
+.second .left p {
+  line-height: 1.5; /* Unitless line-height */
+  margin-bottom: 1.8rem; /* Relative unit for margin */
+  text-align: justify;
+  font-size: 18px; /* Fixed pixel unit for font-size */
+  font-family: 'Josefin Sans', sans-serif;
+  color: #333;
+  font-weight: 400;
+  letter-spacing: none;
+}
+
+.second .right span{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1dvw; /* Dynamic viewport height for gap */
+}
+
+.second .right span h5{
+  line-height: 1; /* Unitless line-height */
+  text-align: left;
+  font-weight: 400;
+  font-size: 20px; /* Fixed pixel unit for font-size */
+  font-family: 'Libre Baskerville', serif;
+  color: #333;
+}
+
+.second .right {
+  display: flex;
+  flex-direction: column;
+  gap: 3dvh; /* Dynamic viewport height for gap */
+  align-items: left;
+}
+
+.second .right img {
+  width: 46px;
+  height: 46px;
+  object-fit: cover;/* Fully rounded for circular image */;
+}
+
+.third {
+  display: flex;
+  flex-direction: column;
+  margin: 5dvh 0 10.5dvh 0; /* Dynamic viewport height for margin */
+}
+
+.third h1{
+  font-size: 48px; /* Fixed pixel unit for font-size */
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: none;
+  font-family: 'Libre Baskerville', serif;
+  margin-bottom: 3.5dvh; /* Dynamic viewport height for margin */
+  color: #023F3A;
+}
+
+.cards {
+  display: flex;
+  gap: 2.5dvw; /* Dynamic viewport width for gap */
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 30dvw; /* Dynamic viewport width for width */
+  height: 50dvh; /* Dynamic viewport height for height */
+  background-size: cover;
+  background-position: center;
+  border-radius: 2dvh; /* Dynamic viewport height for border-radius */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+#card_1{
+  background-image: url(../Assets/products/single_product/product1.png);
+}
+#card_2{
+  background-image: url(../Assets/products/single_product/product2.png);
+}
+#card_3{
+  background-image: url(../Assets/products/single_product/product3.png);
+}
+
+.overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 3.476dvh; /* Dynamic viewport height for padding */
+  color: white;
+}
+
+.overlay h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 24px; /* Fixed pixel unit for font-size */
+  font-weight: 400;
+  margin-bottom: 2dvh; /* Dynamic viewport height for margin */
+  width: 25dvw; /* Dynamic viewport width for width */
+  height: 5.6dvh; /* Dynamic viewport height for height */
+  line-height: 32px;
+  letter-spacing: none;
+  /* Animation */
+  opacity: 0;
+  transform: translateY(3.5dvh); /* Dynamic viewport height for transform */
+  animation: uploadFade 3s ease-in-out infinite;
+}
+
+/* Keyframes */
+@keyframes uploadFade {
+  0% {
+    opacity: 0;
+    transform: translateY(3.5dvh); /* Dynamic viewport height for transform */
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(3.5dvh); /* Dynamic viewport height for transform */
+  }
+}
+
+
+
+.fourth {
+  text-align: center;
+  padding-top: 4dvh; /* Dynamic viewport height for padding */
+  padding-bottom: 4dvh; /* Dynamic viewport height for padding */
+  background: linear-gradient(to bottom, #fff 50%, #023F3A 50%);
+}
+
+.fourth .container{
+  background: #f2eee9;
+  padding: 6dvh 6dvw; /* Dynamic viewport units for padding */
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  gap: 3dvw; /* Dynamic viewport width for gap */
+}
+.fourth .container .left h1 {
+  font-size: 48px; /* Fixed pixel unit for font-size */
+  font-weight: 700;
+  letter-spacing: none;
+  line-height: 1.2;
+  font-family: 'Libre Baskerville', serif;
+  margin-top: 3.5dvh; /* Dynamic viewport height for margin */
+  margin-bottom: 3.5dvh; /* Dynamic viewport height for margin */
+  color: #023F3A;
+  text-align: left;
+}
+
+.fourth .container .left p {
+  line-height: 1.5; /* Unitless line-height */
+  text-align: left;
+  font-size: 18px; /* Fixed pixel unit for font-size */
+  font-family: 'Josefin Sans', sans-serif;
+  color: #333;
+  font-weight: 400;
+  width: 65%; /* Percentage value for width */
+}
+
+.fourth .container .right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3dvw; /* Dynamic viewport width for gap */
+}
+
+.fourth .container .right a:hover,
+.fourth a.btnn:hover {
+  background: rgb(68, 129, 68);
+  color: #fff;
+  box-shadow: 0 0 0.869dvh 0 rgba(0, 0, 0, 0.2); /* Dynamic viewport height for shadow */
+  transition: 0.1s;
+}
+
+.fourth .container .right .btn {
+  text-decoration: none;
+  padding: 1.5dvh 1.3dvw; /* Dynamic viewport units for padding */
+  font-weight: 600;
+  border-radius: 0.35dvh; /* Dynamic viewport height for border-radius */
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px; /* Fixed pixel unit for font-size */
+  background: #ff0000;
+  box-shadow: 0.521dvw 0.869dvw 0.869dvw 0 rgba(0, 0, 0, 0.3); /* Dynamic viewport units for shadow */
+  border-radius: 0.35dvh; /* Dynamic viewport height for border-radius */
+  color: #fff;
+}
+
+footer {
+  margin: 0;
+  padding: 8.689dvh 4.594dvw 5.214dvh 4.594dvw; /* Dynamic viewport units for padding */
+  background: #f8f6f4;
+  width: 100%;
+  height: auto;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2dvw; /* Dynamic viewport width for gap */
+  padding: 0px 10px;
+}
+
+.footer-container .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  padding: 3.5dvh 0; /* Dynamic viewport height for padding */
+  gap: 3.8dvw; /* Dynamic viewport width for gap */
+}
+
+.footer-logo img {
+  width: 9dvw; /* Dynamic viewport width for width */
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links h1 {
+  font-size: 18px; /* Fixed pixel unit for font-size */
+  margin-bottom: 3.5dvh; /* Dynamic viewport height for margin */
+  color: #222222;
+  font-weight: 600;
+  letter-spacing: 1px; /* Fixed pixel unit for letter-spacing */
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.link {
+  opacity: 0.85;
+  padding: 1.043dvh 0; /* Dynamic viewport height for padding */
+  line-height: 1.6;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.footer-links a {
+  font-size: 14px; /* Fixed pixel unit for font-size */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #000;
+}
+
+.footer-links a:hover {
+  color: #000;
+  text-decoration: underline;
+  text-decoration-thickness: 0.35dvh; /* Dynamic viewport height for text-decoration-thickness */
+  padding-left: 0.23dvw; /* Dynamic viewport width for padding */
+}
+
+.footer-links h3 {
+  display: inline;
+  font-weight: bold;
+  font-size: 14px; /* Fixed pixel unit for font-size */
+  margin-left: 0.5dvw; /* Dynamic viewport width for margin */
+  color: #000;
+}
+
+.social-icons a {
+  margin-right: 0.8dvw; /* Dynamic viewport width for margin */
+  font-size: 18px; /* Fixed pixel unit for font-size */
+  color: #000;
+}
+
+.social-icons a:hover {
+  color: #0d9e66;
+  padding-left: 0.08dvw; /* Dynamic viewport width for padding */
+}
+
+.footer-divider {
+  margin: 5dvh 0; /* Dynamic viewport height for margin */
+  border: 0;
+  height: 0.2dvh; /* Dynamic viewport height for height */
+  background: #ddd;
+}
+
+footer h3 {
+  text-align: center;
+  font-size: 14px; /* Fixed pixel unit for font-size */
+  padding-bottom: 1.8dvh; /* Dynamic viewport height for padding */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    box-sizing: border-box;
+    font-family: 'poppins', 'sans-serif';
+  }
+
+  header{
+    height: 7dvh; /* Dynamic viewport height for header */
+  }
+
+  .header-container {
+    padding: 15px 30px; /* Kept from previous version */
+    position: fixed;
+    z-index: 100000;
+    margin-bottom: 0; /* Adjusted for mobile */
+  }
+
+  .desktop-nav {
+    display: none; /* Hide desktop menu on mobile */
+  }
+
+  .mobile-menu-btn {
+    display: block; /* Show hamburger button */
+    border: 0;
+    background: inherit;
+    font-size: 16px; /* Kept from previous version */
+    font-weight: 700;
+  }
+
+  .mobile-nav {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 1rem;
+    background: #fff;
+    padding: 1rem;
+    position: absolute;
+    top: 70px; /* Kept from previous version */
+    left: 0;
+    right: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-nav.active {
+    display: flex;
+  }
+
+  .mobile-nav a:hover,
+  .mobile-nav a.btnn:hover {
+    background: rgba(68, 129, 68, 0.452);
+    color: #310606;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.1s;
+  }
+
+  .mobile-nav a {
+    margin: 0;
+    text-decoration: none;
+    width: 100%;
+    border-bottom: #023f3a18 1px solid;
+    font-weight: 600;
+    padding: 5px 20px;
+    color: #18191f;
+    border-radius: 2px;
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 22.6px;
+    font-size: 12px;
+  }
+
+  .mobile-nav .btn {
+    background: #ff0000;
+    box-shadow: 3px 5px 5px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    color: #fff;
+  }
+
+
+  #main-product {
+    margin-bottom: 10dvh; /* Adjusted for mobile */
+    height: 40dvh; /* Adjusted for mobile */
+  }
+
+  #main-product h1 {
+    font-size: 36px; /* Adjusted for mobile */
+  }
+
+  .section {
+    padding-left: 5dvw;
+    padding-right: 5dvw;
+  }
+
+  .first {
+    grid-template-columns: 1fr; /* Stack on mobile */
+    height: auto;
+    padding-top: 4dvh;
+    padding-bottom: 4dvh;
+    margin-top: 4dvh;
+    gap: 3dvh;
+  }
+
+  .first .right {
+    grid-template-rows: 1fr; /* Display as single column */
+    gap: 2dvh;
+  }
+
+  .second {
+    grid-template-columns: 1fr; /* Stack on mobile */
+    gap: 4dvh;
+    padding-top: 4dvh;
+    padding-bottom: 4dvh;
+  }
+
+  .second > div h2 {
+    font-size: 25px; /* Adjusted for mobile */
+    margin-bottom: 2dvh;
+    text-align: left;
+  }
+
+  .second > div h3 {
+    font-size: 20px; /* Adjusted for mobile */
+    margin-bottom: 2dvh;
+  }
+
+  .second .left p {
+    font-size: 15px; /* Adjusted for mobile */
+    text-align: justify;
+  }
+
+  .second .right {
+    padding-left: 20px;
+  }
+
+  .second .right span h5 {
+    font-size: 18px; /* Adjusted for mobile */
+  }
+
+  .second .right span img {
+    max-width: 8dvw; /* Adjusted for mobile */
+  }
+
+  .second .right span{
+    gap: 3dvw;
+  }
+
+  .third {
+    margin: 4dvh 0 6dvh 0;
+  }
+
+  .third h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 3dvh;
+  }
+
+  .card {
+    width: 80dvw;
+    height: 40dvh;
+  }
+
+  .overlay h2 {
+    font-size: 20px;
+    width: 70dvw;
+    height: auto;
+  }
+
+  .fourth {
+    padding-top: 2dvh;
+    padding-bottom: 2dvh;
+  }
+
+  .fourth .container {
+    grid-template-columns: 1fr;
+    padding: 4dvh 4dvw;
+    gap: 3dvh;
+  }
+
+  .fourth .container .left h1 {
+    font-size: 32px;
+    margin-top: 2dvh;
+    margin-bottom: 2dvh;
+    text-align: center;
+  }
+
+  .fourth .container .left p {
+    font-size: 16px;
+    width: 100%;
+    text-align: justify;
+  }
+
+  .fourth .container .right {
+    flex-direction: column;
+    gap: 2dvh;
+  }
+
+  .fourth .container .right .btn {
+    padding: 1.2dvh 2.5dvw;
+    font-size: 14px;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 30px 30px 30px; /* Adjusted padding for better mobile fit */
+  }
+
+  .footer-container { /* This targets the outer container in your product.html footer */
+    display: grid;
+    width: 100%;
+    gap: 30px;
+    grid-template-columns: 1fr;
+    justify-content: left;
+  }
+
+  /* Adjustments for the inner containers to match the about page's stacked layout */
+  .footer-container .container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adjust gap between elements within a column */
+    padding: 0; /* Remove horizontal padding that might push content */
+    align-items: left; /* Center align content within each column */
+  }
+
+  .footer-logo img {
+    width: 100%; /* Match about page's logo size */
+    margin: 0;
+    display: block;
+  }
+
+  .footer-links {
+    text-align: left; /* Center the text for all footer link sections */
+    width: 100%; /* Ensure it takes full width to center text */
+  }
+
+  .footer-links h1 {
+    font-size: 16px; /* Match about page's h1 size */
+    margin-bottom: 15px; /* Match about page's margin */
+    text-align: left;
+  }
+
+  .link {
+    padding: 5px 0; /* Match about page's link padding */
+    text-align: left;
+  }
+
+  .footer-links a {
+    font-size: 14px; /* Match about page's link font size */
+    margin-bottom: 8px; /* Add margin between links for spacing */
+  }
+
+  .footer-links h3 {
+    margin-left: 6px; /* Remove left margin */
+   }
+
+  .social-icons {
+    text-align: left; /* Center social icons */
+    margin-top: 10px; /* Add some top margin */
+  }
+
+  .social-icons a {
+    font-size: 16px; /* Match about page's icon size */
+    margin: 0 5px; /* Adjust margin between icons */
+  }
+
+  .footer-divider {
+    margin: 30px 0; /* Match about page's divider margin */
+  }
+
+  footer h3 {
+    font-size: 12px; /* Match about page's copyright text size */
+    padding-bottom: 10px; /* Match about page's padding */
+  }
+
+  /* Special handling for .produucts to hide it like the about page
+  .produucts {
+    display: none;
+  } */
+}
