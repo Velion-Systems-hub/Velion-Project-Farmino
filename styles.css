@@ -890,9 +890,16 @@ footer {
 
 .footer-links h3 {
     display: inline;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 14px;
     margin-left: 6px;
+    color: #000;
+}
+
+.foot h3 {
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Josefin Sans', sans-serif;
     color: #000;
 }
 
