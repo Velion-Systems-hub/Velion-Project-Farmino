@@ -132,7 +132,6 @@ body {
   height: 60vh;
   padding: 50px;
   box-sizing: border-box;
-  border: 1px orange solid;
 }
 
 .fifth {
@@ -141,7 +140,6 @@ body {
   height: 100%;
   width: 100%;
   flex: 1;
-  border: 1px red solid;
   gap: 70px;
   justify-content: center;
 }
@@ -196,7 +194,6 @@ body {
   align-items: flex-start;
   width: 70.17%;
   height: 100%;
-  border: 1px blue solid;
 }
 
 .content h2 {
@@ -234,11 +231,7 @@ body {
   gap: 100px;
   margin: 0 auto;
   box-sizing: border-box;
-  border: 1px green solid;
   margin-bottom: 80px;
-}
-
-.three {
 }
 
 .img-container {
