@@ -91,7 +91,7 @@ const playVideo = (vids) => {
 
   const video = videos[vids];
   video.classList.add('active');
-  video.playbackRate = 3; // ⏩ Set playback speed here
+  video.playbackRate = 3000; // ⏩ Set playback speed here
   video.play();
 
   video.onended = () => {
