@@ -500,6 +500,38 @@ body {
   flex-wrap: wrap;
 }
 
+.team-member {
+  position: relative;
+  width: 250px;
+  height: 280px;
+  /*adjustasneeded*/
+  background: url('../Assets/carrot.png') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  text-align: left;
+  color: #ffffffde;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4); /*darkoverlay*/
+  border-radius: 3px;
+}
+
+.team-member h3 {
+  margin: 4px 0;
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+.team-member h4 {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: normal;
+}
+
 footer {
   margin: 0;
   padding: 50px 60px 30px 60px; /* balanced spacing */
@@ -684,7 +716,7 @@ footer h3 {
 
   .fifth-section {
     padding: 0px;
-    margin: 90px 30px 20% 30px;
+    margin: 90px 30px 20px 30px;
     height: 100%;
   }
 
@@ -694,11 +726,12 @@ footer h3 {
     justify-content: center;
     align-items: center;
     height: fit-content;
-    gap: 30px;
+    gap: 25px;
   }
 
   .video-container {
     height: 20rem;
+    width: 100%;
   }
 
   .play-button {
