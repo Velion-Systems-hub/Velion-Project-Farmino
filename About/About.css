@@ -504,7 +504,7 @@ body {
   position: relative;
   width: 250px;
   height: 280px;
-  /*adjustasneeded*/background: url('../Assets/carrot.png') no-repeat center center/cover;
+  background: url('../Assets/carrot.png') no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -856,6 +856,7 @@ footer h3 {
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
+    padding:10px 15px;
   }
 
   .produucts {
@@ -870,7 +871,7 @@ footer h3 {
     display: grid;
     width: 100%;
     gap: 30px;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     /* align-items: center; */
   }
