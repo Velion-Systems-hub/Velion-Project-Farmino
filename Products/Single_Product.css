@@ -55,11 +55,6 @@ body {
   cursor: pointer;
 }
 
-.mobile-nav {
-  display: none; /* Hidden by default */
-}
-/*  */
-
 .desktop-nav {
   display: flex;
   gap: 0.9dvh; /* Dynamic viewport height for gap */
@@ -84,7 +79,7 @@ body {
   background: #fff;
   padding: 1rem; /* Relative unit for padding */
   position: absolute;
-  top: 12dvh; /* Dynamic viewport height for top position */
+  top: 7dvh; /* Dynamic viewport height for top position */
   left: 0;
   right: 0;
   box-shadow: 0 0.7dvh 1dvh rgba(0, 0, 0, 0.1); /* Dynamic viewport height for shadow */
@@ -135,7 +130,7 @@ body {
 .first {
   padding-top: 8dvh;
   padding-bottom: 4dvh;
-  margin-top: 6dvh; /* Viewport height for margin */
+  margin-top: 7dvh; /* Viewport height for margin */
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 3fr 2fr;
@@ -556,7 +551,6 @@ footer h3 {
     background: #fff;
     padding: 1rem;
     position: absolute;
-    top: 70px; /* Kept from previous version */
     left: 0;
     right: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
