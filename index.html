@@ -27,10 +27,10 @@
 </head>
 
 <body>
-    <header class="contact-header container">
+    <header class="header-container">
         <div class="contact-logo">
             <a href="#" class="logo nav_left">
-                <img src="../Assets/logo.png" height="30" width="150" alt="logo">
+                <img src="./Assets/logo.png" height="30" width="150" alt="logo">
             </a>
         </div>
 
@@ -402,12 +402,14 @@
                         <img src="./Assets/socials.png" alt="logo">
                         <h1>Socials</h1>
                         <div class="social-icons">
-                            <a href="https://www.facebook.com" target="_blank"><i
-                                    class="fa-brands fa-facebook-f"></i></a>
-                            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="https://www.instagram.com" target="_blank"><i
-                                    class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.facebook.com" target="_blank" rel="noopener"
+                                title="Visit our Facebook page"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.twitter.com" target="_blank" rel="noopener"
+                                title="Visit our Twitter page"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener"
+                                title="Visit our Instagram page"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com" target="_blank" rel="noopener"
+                                title="Visit our LinkedIn page"><i class="fa-brands fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -428,47 +430,64 @@
 
     <footer class="foot">
         <div class="footer-container">
-            <div class="footer-logo">
-                <img src="./Assets/logo.png" alt="logo">
+            <div class="container">
+                <div class="footer-logo">
+                    <img src="./Assets/logo.png" alt="logo" />
+                </div>
             </div>
 
-            <div class="footer-links">
-                <h1>Quick links</h1>
-                <a href="#" class="link">Home</a>
-                <a href="./About/About.html" class="link">About</a>
-                <a href="./Contact/Contact.html" class="link">Contact</a>
-                <a href="" class="link">Why choose us</a>
-                <a href="" class="link">Privacy - Policy</a>
-                <a href="" class="link">Team</a>
-            </div>
+            <div class="container">
+                <!-- Quick Links Column -->
+                <div class="footer-links">
+                    <h1>Quick links</h1>
+                    <a href="../index.html" class="link">Home</a>
+                    <a href="../About/About.html" class="link">About</a>
+                    <a href="../Contact/Contact.html" class="link">Contact</a>
+                    <a href="" class="link">Why choose us</a>
+                    <a href="" class="link">Privacy - Policy</a>
+                    <a href="" class="link">Team</a>
+                </div>
 
-            <div class="footer-links produucts">
-                <h1>Products</h1>
-                <a href="Products/Single_Product.html" class="link">Single Product</a>
-                <a href="./About/About.html" class="link">About</a>
-                <a href="./Contact/Contact.html" class="link">Contact</a>
-                <a href="" class="link">Why choose us</a>
-                <a href="" class="link">Team</a>
-            </div>
+                <!-- Products Links Column -->
+                <div class="footer-links produucts">
+                    <h1>Products</h1>
+                    <a href="" class="link">Tomatoes</a>
+                    <a href="" class="link">Mangoes</a>
+                    <a href="" class="link">Red Cherries</a>
+                    <a href="" class="link">Banana</a>
+                    <a href="" class="link">Carrots</a>
+                </div>
 
-            <div class="footer-links">
-                <h1>Contact Us</h1>
-                <a href="" class="link">Business Enquiry <h3>+2347049917</h3></a>
-                <a href="" class="link">Customer care <h3>+2347049917</h3></a>
-            </div>
+                <!-- Contact Us Column -->
+                <div class="footer-links">
+                    <h1>Contact Us</h1>
+                    <a href="" class="link">Business Enquiry
+                        <h3>+2347049917</h3>
+                    </a>
+                    <a href="" class="link">Customer care
+                        <h3>+2347049917</h3>
+                    </a>
+                </div>
 
-            <div class="footer-links">
-                <h1>Social</h1>
-                <div class="social-icons social-icons-footer">
-                    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <!-- Social Media Icons Column -->
+                <div class="footer-links">
+                    <h1>Social</h1>
+                    <div class="social-icons social-icons-footer">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener"
+                            title="Visit our Facebook page"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener"
+                            title="Visit our Twitter page"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener"
+                            title="Visit our Instagram page"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener"
+                            title="Visit our LinkedIn page"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-        <hr class="footer-divider">
-        <h3 class="footh3">&copy;2022 Farmino | All Right Reserved</h3>
+        <hr class="footer-divider" />
+        <!-- Copyright Information -->
+        <h3>&copy;2022 Farmino | All Right Reserved</h3>
     </footer>
     <script src="script.js"></script>
     <script src="responsive.js"></script>
