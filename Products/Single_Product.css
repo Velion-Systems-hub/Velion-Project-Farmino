@@ -99,7 +99,6 @@ body {
 }
 
 #main-product {
-  background: url(../Assets/products/single_product/tomatoes.png) no-repeat center 50%;
   margin-bottom: 45dvh; /* Dynamic viewport height for margin */
   margin: 0;
   height: 70dvh; /* Viewport height for main product section */
@@ -107,6 +106,14 @@ body {
   top: 7dvh;
   opacity: 0.8;
   position: relative; /* ensures text sits on top */
+}
+
+.single_product{
+  background: url(../Assets/products/single_product/single_product.png) no-repeat center 50%;
+}
+
+.products{
+  background: url(../Assets/products/products/products.png) no-repeat center 50%;
 }
 
 #main-product h1 {
@@ -174,7 +181,6 @@ body {
   align-items: stretch;
   gap: 7dvw; /* Dynamic viewport width for gap */
   justify-content: space-between;
-  align-items: center;
   width: 100%;
 }
 
@@ -244,7 +250,14 @@ body {
 .third {
   display: flex;
   flex-direction: column;
+}
+
+#single_product .third{
   margin: 5dvh 0 10.5dvh 0; /* Dynamic viewport height for margin */
+}
+
+#products .third{
+  margin-top: 2dvh; /* Dynamic viewport height for margin */
 }
 
 .third h1{
@@ -258,14 +271,18 @@ body {
 }
 
 .cards {
-  display: flex;
+  padding-top: 8dvh;
+  padding-bottom: 4dvh;
+  margin-top: 6dvh; /* Viewport height for margin */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2.5dvw; /* Dynamic viewport width for gap */
-  justify-content: center;
-  align-items: center;
+  align-items: stretch;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
 .card {
-  width: 30dvw; /* Dynamic viewport width for width */
   height: 50dvh; /* Dynamic viewport height for height */
   background-size: cover;
   background-position: center;
@@ -277,13 +294,22 @@ body {
 }
 
 #card_1{
-  background-image: url(../Assets/products/single_product/product1.png);
+  background-image: url(../Assets/products/products/product1.png);
 }
 #card_2{
-  background-image: url(../Assets/products/single_product/product2.png);
+  background-image: url(../Assets/products/products/product2.png);
 }
 #card_3{
-  background-image: url(../Assets/products/single_product/product3.png);
+  background-image: url(../Assets/products/products/product3.png);
+}
+#card_4{
+  background-image: url(../Assets/products/products/product4.png);
+}
+#card_5{
+  background-image: url(../Assets/products/products/product5.png);
+}
+#card_6{
+  background-image: url(../Assets/products/products/product6.png);
 }
 
 .overlay {
@@ -647,6 +673,9 @@ footer h3 {
   }
 
   .cards {
+    grid-template-columns: 1fr; /* Stack cards on mobile */
+    padding: 4dvh 4dvw;
+    justify-items: center;
     flex-direction: column;
     gap: 3dvh;
   }
